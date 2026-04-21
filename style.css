@@ -1,0 +1,165 @@
+/* basic styling for lab 3 */
+:root {
+  --main-color: coral;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+  font-size: 16px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  min-width: 250px;
+}
+header {
+  background-color: rgba(0, 255, 200, 0.5);
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: hsla(180, 60%, 90%, 0.8);
+  padding: 10px;
+}
+section {
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 2px;
+  padding: 15px;
+}
+h1 {
+  color: hsl(220, 80%, 30%);
+}
+h2 {
+  color: var(--main-color, blue);
+}
+h2, h3 {
+  text-transform: none;
+}
+h3 {
+  color: rgb(60, 60, 60);
+}
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+button:active {
+  background-color: lightgray;
+}
+
+img {
+  width: 300px;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+video {
+  height: 240px;
+  min-width: 250px;
+}
+
+.note {
+  font-style: italic;
+}
+
+#attendance {
+  min-width: 200px;
+}
+
+input[type="text"] {
+  border: 1px solid gray;
+}
+
+section > p {
+  line-height: 1.5em;
+}
+
+h2 ~ h3 {
+  letter-spacing: 0.05in;
+}
+
+h1 + h2 {
+  margin-top: 5px;
+}
+
+p.note {
+  color: orange;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.media-box {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+}
+section:has(img) {
+  background-color: aliceblue;
+}
+nav {
+  a {
+    color: darkblue;
+  }
+}
+header {
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 1cm;
+  margin-left: auto;
+
+  padding-top: 10px;
+  padding-right: 1rem;
+  padding-bottom: 10px;
+  padding-left: 1rem;
+
+  border: 3px solid teal;
+}
+summary {
+  display: inline;
+}
+footer {
+  position: relative;
+  padding: 10px 20px 10px 20px;
+  color: color(display-p3 0.5 0.2 0.8);
+  background-color: color-mix(in srgb, coral 60%, white 40%);
+}
+main {
+  margin: auto;
+}
